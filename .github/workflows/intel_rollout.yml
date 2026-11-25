@@ -2,6 +2,9 @@ name: Intel rollout (reports -> statements)
 on:
   workflow_dispatch:
     inputs:
+      classes:
+        description: "Comma list of company classes"
+        default: "operating"
       first:
         description: "First batch number"
         default: "1"
@@ -40,6 +43,7 @@ jobs:
       - name: Process batch
         env:
           NO_OCR: "1"
+          CLASSES: ${{ github.event.inputs.classes }}
         run: |
           SYMS=$(python3 intel/rollout_list.py $(( ${{ matrix.b }} * 25 )) 25)
           echo "batch ${{ matrix.b }}: $SYMS"
@@ -49,6 +53,8 @@ jobs:
           python intel/extract_qualitative.py "$SYMS" || true
           for s in ${SYMS//,/ }; do rm -rf state/intel_raw/reports_text/$s; done
       - name: Commit
+        env:
+          CLASSES: ${{ github.event.inputs.classes }}
         run: |
           git config user.name "psx-bot"; git config user.email "bot@users.noreply.github.com"
           mkdir -p state/intel_raw/reports_index
