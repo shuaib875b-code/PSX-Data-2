@@ -1,0 +1,21 @@
+name: Intel DPS company facts (all in scope)
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -q requests beautifulsoup4
+      - run: python intel/dps_company.py --all-in-scope
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name "psx-bot"; git config user.email "bot@users.noreply.github.com"
+          git add state/intel_dps_company.json state/intel_raw/dps; git commit -m "DPS company facts, all in scope" || echo none
+          for i in 1 2 3 4 5 6 7 8; do git pull --rebase -q && git push -q && break || { git rebase --abort 2>/dev/null; sleep $((RANDOM % 20 + 10)); }; done
