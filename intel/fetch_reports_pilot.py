@@ -77,6 +77,23 @@ def to_text(pdf_bytes):
         pages = len(parts)
         body = sum(len(re.sub(r"\s", "", x)) for x in parts)
         ocr = False
+        if pages and body / max(pages, 1) >= 400 and os.environ.get("MIXED_OCR", "1") == "1":     # text layer present, but statement pages can be pictures: OCR only the near-empty pages
+            weak = [i for i, x in enumerate(parts) if len(re.sub(r"\s|\[\[PDFPAGE[^\]]*\]\]", "", x)) < 150 and " L" not in x[:20] and " R" not in x[:20]][:120]
+            if weak and len(weak) < 0.6 * pages:
+                from concurrent.futures import ThreadPoolExecutor
+                env = dict(os.environ, OMP_THREAD_LIMIT="1")
+                def runp(i):
+                    m = re.match(r"\[\[PDFPAGE (\d+)", parts[i]); n = int(m.group(1))
+                    try:
+                        subprocess.run(["pdftoppm", "-r", "200", "-gray", "-png", "-f", str(n), "-l", str(n), p, os.path.join(d, f"mx{n:04d}")], check=False)
+                        f = [x for x in os.listdir(d) if x.startswith(f"mx{n:04d}") and x.endswith(".png")]
+                        t = subprocess.run(["tesseract", os.path.join(d, f[0]), "-", "--psm", "6"], capture_output=True, env=env, timeout=240).stdout.decode("utf8", "ignore") if f else ""
+                    except Exception: t = ""
+                    return i, t
+                with ThreadPoolExecutor(4) as ex:
+                    for i, t in ex.map(runp, weak):
+                        if len(t.strip()) > 100: parts[i] = parts[i].split("\n", 1)[0] + "\n" + t
+                txt = "\f".join(parts) + "\f"
         if pages and body / max(pages, 1) < 400:       # scanned: no usable text layer
             ocr = True
             if os.environ.get("NO_OCR") == "1":
@@ -132,6 +149,10 @@ def main(argv):
             if only_ocr:
                 m_ = idx.get(s, {}).get(j["key"], {})
                 if not (m_.get("ocr") and m_.get("status") == "ok" and not m_.get("ocr_done") and j["kind"].startswith(kinds)): continue
+            elif os.environ.get("REFETCH_EMPTY") == "1":
+                try: _ex = json.load(open(STATE / "intel_extract" / f"{s}.json")).get(j["key"])
+                except Exception: _ex = None
+                if _ex is None or _ex.get("statements"): continue
             elif path.exists() and not (os.environ.get("REOCR") == "1" and idx.get(s, {}).get(j["key"], {}).get("ocr")):
                 continue
             try:
