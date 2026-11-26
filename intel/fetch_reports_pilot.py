@@ -105,9 +105,9 @@ def pick(sym, nA, nQ, F, D):
     qtr = sorted([r for r in reps if r["kind"] == "quarterly"], key=lambda r: r["period_end"] or "")[-nQ:]
     jobs = [dict(source="portal", key=f"portal_{r['portal_id']}", url=r["url"], kind=r["kind"], period_end=r["period_end"], date_public=r["posting_date"], date_note=r["posting_date_note"], title=None) for r in ann + qtr]
     newest = max([r["posting_date"] for r in reps if r["posting_date"]] or [""])
-    seen_ids = set()
+    seen_ids = set(); portal_periods = {r["period_end"] for r in reps if r["period_end"]}   # periods the portal index skipped are taken from the DPS announcements
     for f in sorted((D.get(sym) or {}).get("filings") or [], key=lambda f: f["date"] or ""):
-        if f["kind"] in ("annual_report", "quarterly_report", "half_year_report") and f["doc_id"] and (f["date"] or "") > newest and f["doc_id"] not in seen_ids:
+        if f["kind"] in ("annual_report", "quarterly_report", "half_year_report") and f["doc_id"] and ((f["date"] or "") > newest or (f["period_end"] and f["period_end"] not in portal_periods)) and f["doc_id"] not in seen_ids:
             seen_ids.add(f["doc_id"])
             jobs.append(dict(source="dps", key=f"dps_{f['doc_id']}", url=f"https://dps.psx.com.pk/download/document/{f['doc_id']}.pdf", kind=f["kind"], period_end=f["period_end"], date_public=f["date"], date_note="announcement_date", title=f["title"]))
     return jobs
@@ -128,7 +128,6 @@ def main(argv):
     touched = {}
     for s in syms:
         for j in pick(s, nA, nQ, F, D):
-            if os.environ.get("DPS_ONLY") == "1" and (j["source"] != "dps" or idx.get(s, {}).get(j["key"], {}).get("status") == "ok"): continue   # only newer-than-portal reports not yet fetched
             path = OUT / s / f"{j['key']}.txt.gz"
             if only_ocr:
                 m_ = idx.get(s, {}).get(j["key"], {})
