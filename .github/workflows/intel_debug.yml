@@ -1,0 +1,33 @@
+name: Intel debug (save report text)
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "name=url comma list"
+        required: true
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils tesseract-ocr
+      - run: pip install -q requests
+      - run: |
+          mkdir -p state/intel_debug
+          python3 - <<'PY'
+          import sys, gzip, requests
+          sys.path.insert(0, "intel")
+          import fetch_reports_pilot as f
+          for item in "${{ github.event.inputs.urls }}".split(","):
+              n, u = item.split("=", 1)
+              r = f.dl(u); txt, pages, ocr, sp = f.to_text(r.content)
+              open(f"state/intel_debug/{n}.txt", "w").write(txt); print(n, pages, ocr, len(txt))
+          PY
+      - run: |
+          git config user.name "psx-bot"; git config user.email "bot@users.noreply.github.com"
+          git add state/intel_debug; git commit -m "debug text" || true
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push -q && break || sleep 10; done
