@@ -128,6 +128,7 @@ def main(argv):
     touched = {}
     for s in syms:
         for j in pick(s, nA, nQ, F, D):
+            if os.environ.get("DPS_ONLY") == "1" and (j["source"] != "dps" or idx.get(s, {}).get(j["key"], {}).get("status") == "ok"): continue   # only newer-than-portal reports not yet fetched
             path = OUT / s / f"{j['key']}.txt.gz"
             if only_ocr:
                 m_ = idx.get(s, {}).get(j["key"], {})

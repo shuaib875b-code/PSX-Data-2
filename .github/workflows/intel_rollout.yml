@@ -11,6 +11,9 @@ on:
       batches:
         description: "Last batch number (exclusive)"
         default: "14"
+      dps_only:
+        description: "1 = only newer reports from DPS announcements not yet fetched"
+        default: "0"
 permissions:
   contents: write
 concurrency:
@@ -43,6 +46,7 @@ jobs:
       - name: Process batch
         env:
           NO_OCR: "1"
+          DPS_ONLY: ${{ github.event.inputs.dps_only }}
           CLASSES: ${{ github.event.inputs.classes }}
         run: |
           SYMS=$(python3 intel/rollout_list.py $(( ${{ matrix.b }} * 25 )) 25)
@@ -62,7 +66,7 @@ jobs:
           import json, subprocess
           idx = json.load(open("state/intel_raw/reports_text/index.json"))
           syms = subprocess.run(["python3", "intel/rollout_list.py", str(${{ matrix.b }} * 25), "25"], capture_output=True, text=True).stdout.strip().split(",")
-          json.dump({s: idx[s] for s in syms if s in idx}, open("state/intel_raw/reports_index/batch_${{ matrix.b }}.json", "w"), separators=(",", ":"))
+          json.dump({s: idx[s] for s in syms if s in idx}, open("state/intel_raw/reports_index/batch_${{ github.event.inputs.dps_only }}_${{ github.event.inputs.classes }}_${{ matrix.b }}.json", "w"), separators=(",", ":"))
           PY
           git checkout -- state/intel_raw/reports_text/index.json 2>/dev/null || true
           git add state/intel_extract state/intel_qual state/intel_raw/reports_index
