@@ -1,0 +1,42 @@
+name: Intel redo (re-read reports that gave no statements)
+on:
+  workflow_dispatch:
+    inputs:
+      symbols:
+        description: "comma list"
+        required: true
+permissions:
+  contents: write
+concurrency:
+  group: intel-redo
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils tesseract-ocr
+      - run: pip install -q requests
+      - name: Redo
+        env:
+          REFETCH_EMPTY: "1"
+        run: |
+          python intel/fetch_reports_pilot.py "${{ github.event.inputs.symbols }}" --annual 5 --quarterly 8
+          python intel/extract_statements.py "${{ github.event.inputs.symbols }}"
+          python3 - <<'PY'
+          import json
+          idx = json.load(open("state/intel_raw/reports_text/index.json"))
+          syms = "${{ github.event.inputs.symbols }}".split(",")
+          json.dump({s: idx[s] for s in syms if s in idx}, open("state/intel_raw/reports_index/redo_${{ github.run_id }}.json", "w"), separators=(",", ":"))
+          PY
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name "psx-bot"; git config user.email "bot@users.noreply.github.com"
+          git checkout -- state/intel_raw/reports_text/index.json 2>/dev/null || true
+          git add state/intel_extract state/intel_raw/reports_index
+          git commit -m "Intel redo ${{ github.run_id }}" || echo none
+          for i in 1 2 3 4 5 6 7 8; do git pull --rebase -q && git push -q && break || { git rebase --abort 2>/dev/null; sleep $((RANDOM % 20 + 10)); }; done
