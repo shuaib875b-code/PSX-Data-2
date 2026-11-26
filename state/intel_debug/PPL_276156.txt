@@ -1,0 +1,733 @@
+[[PDFPAGE 1]]
+[[PDFPAGE 2]]
+COMPANY INFORMATION
+
+Board of Directors                             Auditors
+                                               KPMG Taseer Hadi & Co.
+Mr. Shahab Rizvi
+                                               Chartered Accountants
+    Chairman
+Mr. Mohammad Khalid Rehman                     Bankers
+    Chief Executive Officer /
+                                               Allied Bank Limited
+    Managing Director
+                                               Askari Bank Limited
+Mr. Abid Sattar                                Bank Alfalah Limited
+Mr. Aftab Ahmad                                Bank Al Habib Limited
+                                               Dubai Islamic Bank
+Mr. Imtiaz A.H. Laliwala                       Faysal Bank Limited
+Mr. Mian Imtiazuddin                           Habib Bank Limited
+                                               Habib Metropolitan Bank Limited
+Mr. Mirza Nasir-Ud-Din Mashhood                Industrial and Commercial Bank of China
+    Ahmad                                      JS Bank Limited
+Mr. Qumar Sarwar Abbasi                        MCB Bank Limited
+                                               Meezan Bank Limited
+Mr. Shakeel Qadir Khan                         National Bank of Pakistan
+Mr. Usman Ahmed Chaudhry                       Samba Bank Limited
+                                               Soneri Bank Limited
+                                               Standard Chartered Bank (Pakistan) Limited
+Company Secretary                              The Bank of Punjab
+Mr. Ali Jaffar                                 United Bank Limited
+
+Chief Financial Officer
+                                               Shares Registrar
+Mr. Muhammad Mubbasshar Siddiqui
+                                               FAMCO Share Registration Services
+                                               (Private) Limited
+Registered Office                              8-F, Next to Hotel Faran, Nursery Block-6
+P.I.D.C. House                                 P.E.C.H.S., Shahra-e-Faisal
+Dr. Ziauddin Ahmed Road                        Karachi
+P.O. Box 3942                                  Tel: +92 (21) 34380101-05
+Karachi-75530                                  Fax: +92 (21) 34380106
+
+Contact Details                                Legal Advisors
+UAN: +92 (21) 111 568 568                      Surridge & Beecheno
+Fax: +92 (021) 35680005 & 35682125
+Website: www.ppl.com.pk
+
+Registration Number
+CUIN: 0000378
+
+
+
+
+                           Quarterly Report – 31st March 2026
+                              Pakistan Petroleum Limited
+[[PDFPAGE 3]]
+DIRECTORS’ INTERIM REVIEW
+
+Your directors are pleased to present the unaudited condensed interim financial statements for the
+nine months period ended March 31, 2026, and a brief review of the Company’s operations.
+
+OPERATIONAL AND FINANCIAL HIGHLIGHTS
+
+Operational Highlights
+The key operational highlights for the nine months period ended March 31, 2026, are as follows:
+Discoveries
+
+Two discoveries have been made in PPL operated blocks viz. oil and gas discovery from exploration
+well Dhok Sultan-3 (Dhok Sultan) in Patala and Lockhart formations and unconventional gas
+discovery in exploration well Lal X-1 (Kandhkot) in Lower Alabaster formation.
+
+Nine discoveries have been made in partner-operated blocks, as follows: gas discovery from
+exploration well Barki-1 (Kotri North) in the Pab formation; gas discovery from
+Sawan North Deep-1 in the Lower Goru formation (A-interval sands); five oil and gas discoveries
+from Baragzai X-1 (Nashpa) in the Kingriali, Datta, Shinawari/Samana Suk, Lumshiwal, and Lockhart
+formations; and two gas discoveries from Bilitang-1 (Tal) in the Hangu/Lumshiwal and Lockhart
+formations.
+Drilling Activities
+In partner-operated areas, two exploration wells viz. Barki-1 (Kotri North), Billitang-1 (Tal) and three
+development wells Rizq-6 and Rehman-9 (Kirthar) and Miano TGS Hz-1 were spudded during the
+period.
+Geophysical Surveys
+2D seismic data of 201 line km was acquired in PPL operated Khuzdar block. In partner operated
+blocks, 265 sq. km of 3D seismic data and 78 line km of 2D seismic data were acquired in Baran and
+Kuhan, respectively.
+Financial Highlights
+The key financial results of the Company for the nine months period ended March 31, 2026, are as
+follows:
+
+                                             Nine months ended           Nine months ended
+                                               March 31, 2026              March 31, 2025
+                                                                Rs Million
+
+
+ Sales revenue (net)                                        179,037                     190,723
+ Profit before taxation                                      94,999                     110,876
+ Taxation                                                   (33,842)                    (38,167)
+ Profit after taxation                                       61,157                      72,709
+ Basic and Diluted Earnings Per Share
+ (Rs)                                                         22.48                       26.72
+
+
+
+
+                                                   1
+[[PDFPAGE 4]]
+Sales revenue
+Sales revenue decreased by Rs 11,686 million during the current period as compared to the
+corresponding period. The decrease is due to negative volume variance amounting to Rs 7,568
+million, coupled with negative price variance of Rs 4,118 million.
+Negative volume variance is mainly attributable to lower sales volumes from Sui, Adhi, and Kirthar
+fields. This variance is mainly attributable to natural decline and curtailment of gas sales by SNGPL
+in Sui. This was partially offset by higher sales as a result of the commencement of production from
+discovery wells of Shah Bandar, Gambat South, Dhok Sultan and Kotri North as well as from
+Kandhkot owing to higher gas off-takes by GENCO-II.
+
+Negative price variance is primarily due to the decline in average international crude oil prices from
+US$ 76 / bbl during the corresponding period to US$ 72 / bbl during the current period.
+
+A comparison of the Company’s share of sales volumes from all PPL operated and partner operated
+fields is given below:
+                                                        Nine months          Nine months
+                                           Unit       ended March 31,      ended March 31,
+                                                            2026                 2025
+
+ Natural Gas                              MMscf                 127,967               134,860
+ Crude Oil / Natural Gas Liquids /
+  Condensate                               BBL                2,851,604             2,861,656
+
+ Liquefied Petroleum Gas (LPG)           M. Ton                  72,952                 77,047
+ Barytes                                 M. Ton                  30,867                 46,519
+
+Profitability
+Profitability decreased by approximately 16% compared to the corresponding period. The decrease
+was primarily attributable to lower sales revenue (as explained above), higher operating expenses
+due to increased amortisation charge, lower other income due to decline in interest rates and reversal
+of impairment loss on investment in PPLA in the corresponding period. The decline in profitability was
+partially offset by the recovery of past costs arising from the farm-out of 12.5% and 2.5% working
+interest in the Kuhan and Margand blocks, respectively, and 65% participating interest in the Indus-
+C block as well as the recognition of liquidated damages as other income pursuant to settlement
+agreement with EPCC contractors.
+
+Liquidity management and cash flow position
+As a result of lower sales, an amount of Rs 200 billion was recovered during the current period versus
+Rs 208 billion in the corresponding period. Further, the Company remained proactively engaged with
+stakeholders, including pertinent ministries, to address both immediate cash flow exigencies and to
+chart sustainable solutions to the circular debt challenge.
+
+FOCUS AREAS
+Exploration
+At present, the Company's portfolio, together with its subsidiaries and associate, consists of
+forty-nine (49) exploratory blocks, out of which twenty-five (25) are operated (including one offshore
+Block-5 in Abu Dhabi, being operated by Pakistan International Oil Limited), and twenty-four (24),
+including one offshore block in Pakistan and one onshore block in Yemen, are partner operated.
+
+
+                                                  2
+[[PDFPAGE 5]]
+In addition, the Company holds eight provisionally awarded blocks, comprising two operated blocks
+(offshore Gharo Creek and Kochi Creek) and six partner operated blocks (offshore Bin Qasim South,
+Keti Bandar, Behr, Zarrar, Offshore Deep D and Sapat Bandar). An update on major exploration
+activities is as follows:
+Exploration Domestic
+
+In Hisal block, fracture characterisation study has been completed to mature the prospects.
+In Gambat South block, in-house test processing of 100 sq. km 3D seismic data is in progress,
+whereas exploration well Taban East X-1 has been spudded during April 2026.
+
+In Sirani block, wellsite construction of exploration well Dolphin X-1 has been completed, and the well
+has been spudded during April 2026 to explore the extension of Petroleum System of Jhim East X-1
+and Pateji X-1 discoveries towards the Pakistan offshore basin.
+In Shah Bandar block, re-bidding process for civil works is underway to drill exploration well
+Rahi X-1.
+
+Exploration Frontier
+In Kandhkot, preparations are underway for civil works and drilling of exploration well Lal X-2 to test
+the lower Alabaster play.
+Partner-Operated Exploration Blocks
+In Baran block, 265 sq. km of 3D seismic data was acquired against planned acquisition of
+581 sq. km.
+In Kuhan block, 78 line km of 2D seismic data was acquired and its processing and interpretation are
+currently underway.
+
+In Tal block, drilling activities for the exploration well Bilitang-1 were completed, resulting in two gas
+discoveries in the Hangu/Lumshiwal and Lockhart formations. Given the marginal nature of the initial
+discoveries, a sidetrack was undertaken to target improved reservoir quality. The sidetrack resulted
+in a significant gas flow of ~26.5 MMscfd from the Lumshiwal formation.
+
+In Kirthar block, rigless testing at discovery well Rafat-1 was completed. Currently, procurement of
+pipeline is in progress to tie-in the well.
+
+In Sawan, following the gas discovery at Sawan North Deep-1, procurement of surface well testing
+equipment is underway to facilitate extended well testing, the results of which will support the
+development of a sustainable production plan.
+In Nashpa, drilling activities of exploration well Baragzai-1 were completed, resulting in oil and gas
+discoveries across five formations, namely Kingriali, Datta, Shinawari/Samana Suk, Lumshiwal and
+Lockhart. The cumulative flow from all formations during testing was ~13,470 bpd of oil and ~36.47
+MMscfd of gas. Subsequent to the period end, production from the well has been commenced at
+~5,300 bpd of oil, ~17 MMscfd of gas and 15 MT of LPG.
+
+Overseas and Core Business Development
+As part of business strategy, the Company regularly acquires and divests working interest in
+exploration blocks to further expand and optimise its exploration portfolio while remaining within its
+risk appetite, including scouting, and assessing of new overseas and domestic opportunities.
+The signing ceremony for the grant of the Kalat South block (as operator) and Ziarat North block (as
+partner operated) to the Company was held on February 26, 2026. These blocks were provisionally
+awarded to the Company during the Pakistan Onshore Bid Round 2025 held in April 2025.
+
+
+                                                    3
+[[PDFPAGE 6]]
+Farm-out Efforts
+In Margand block, a deed of assignment for transfer of the Company’s 2.5% working interest to
+Balochistan Energy Private Limited on a full participation basis, was signed on February 06, 2026.
+Mineral Exploration
+The Fifth Edition of the Future Minerals Forum was held in Riyadh, Kingdom of Saudi Arabia from
+January 13-15, 2026, where the Company led and organised the Pakistan Pavilion: ‘The Mineral
+Marvel’. The pavilion showcased Pakistan’s vast mining potential and attracted numerous delegates
+visiting from around the world.
+
+With respect to the Reko Diq project, the Company has made further equity investment in Pakistan
+Minerals (Private) Limited (PMPL) during the period amounting to Rs 21,100 million which has
+increased the total cost of investment of the Company in the associate to Rs 75,166 million. The
+operator continues to review all aspects of the project including security situation, capital
+requirements, project financing, project scope and timelines.
+
+Exploration Blocks of PPL Europe - Wholly Owned Subsidiary
+In Sawan, following the gas discovery at Sawan North Deep-1, procurement of surface well testing
+equipment is underway to facilitate extended well testing, the results of which will support the
+development of a sustainable production plan.
+
+Exploration Block of PPL Asia (PPLA) - Wholly Owned Subsidiary
+PPLA is pursuing new business opportunities in line with its strategic objectives.
+
+Offshore Block 5 - Abu Dhabi
+
+Subsurface and exploration activities progressed during the period, including a block-scale
+prospectivity evaluation currently in its final stages. This evaluation is expected to establish an
+inventory of leads and prospects to support the exploration strategy for the second exploration period
+and beyond.
+
+A contract for a seismic reprocessing study has been awarded to enhance subsurface imaging in
+selected areas and support further prospect maturation.
+Multiple development concepts were evaluated with a focus on maximising the utilisation of existing
+infrastructure. A preferred development concept has been selected as the basis for Front-End
+Engineering Design (FEED), which is scheduled to commence in fourth quarter of FY 2025-26. The
+FEED phase is expected to refine cost estimates and project timelines, providing a defined basis
+ahead of the Final Investment Decision (FID) and Engineering, Procurement and Construction (EPC)
+award.
+
+Producing Fields
+Sui
+Surface debottlenecking activities were carried out at three wells, resulting in incremental gas
+production of ~2 MMscfd. Further, hot gas path and axial air compressor inspection and maintenance
+of Gas Turbine GT 501D have been completed to maintain reliability and operability of the turbine.
+
+During the period, average gas sales to SNGPL and SSGCL remained ~171 MMscfd, compared to
+~209 MMscfd during the corresponding period, primarily due to gas curtailments by SNGPL.
+However, there has been no gas curtailment since early March 2026 due to reduced RLNG inflows
+amid geopolitical tensions in the Middle East.
+
+
+                                                  4
+[[PDFPAGE 7]]
+Kandhkot
+Well surveillance along with key asset integrity activities were executed, including a rigless
+intervention job that successfully restored integrity of well KDT 25 (M). Further, service exchange of
+gas generator at TUCO-C and overhauling of gas genset were undertaken.
+
+Average gas sales to GENCO-II improved to ~101 MMscfd compared to ~90 MMscfd during the
+corresponding period owing to higher gas off-takes by GENCO-II.
+Adhi
+Additional perforations in Adhi-20TK increased output by ~100 bpd oil and 0.5 MMscfd gas. Adhi-
+16TK was placed on gas lift to improve deliverability, while maintenance activities including scale
+cleanout at Adhi South-4 and workover of Adhi South-2 for Coiled Tubing Gas Lift (CTGL) retrieval
+were carried out for sustained production. Meanwhile, the reservoir simulation study is ongoing.
+Gambat South
+The Faiz Basal Sand discovery, previously considered non-commercial due to limited resources and
+lack of infrastructure, was successfully brought online in February 2026 and was tied in with a nearby
+feeder line. The well is now producing ~3 MMscfd of gas and 430 bpd of condensate.
+
+Preparations are underway for drilling of development well Sharf-4 and a water disposal well. The
+development well is expected to enhance gas recovery, while the water disposal well will support
+produced water handling and sustain field production.
+
+Mechanical, electrical and instrumentation works at Zafir-GPF-III project are currently in progress.
+The Company is actively implementing mitigation measures to minimise external supply chain
+constraints, influenced by the prevailing geopolitical situation and to maintain steady progress
+towards project objectives.
+
+Dhok Sultan
+Acid stimulation job of Dhok Sultan-3 was carried out with instantaneous production gain of ~600 bpd
+oil, ~0.8 MMscfd gas and ~4 MT/ day LPG.
+Oil handling facility is operating at a production rate of ~1,800 bpd oil, ~3.4 MMscfd gas and ~19 MT
+/ day LPG.
+Bolan Mining Enterprises
+At Nokkundi Iron Ore project, drilling of 2,700 meters of iron ore is in progress, of which 1,700 meters
+were completed during the period.
+
+Award of contract for management consultancy of Baryte-Lead-Zinc (BLZ) project is expected during
+fourth quarter of FY 2025-26.
+
+Partner-operated Assets
+In Miano, development well Miano TGS Hz-1 was spudded on February 22, 2026, and currently well
+logging is in progress.
+
+In Nashpa, Baragzai-1 well has been tied-in and production has been commenced during April 2026.
+
+BUSINESS EXCELLENCE
+The Company successfully rolled out its proprietary Business Excellence Framework. To ensure a
+rigorous and objective evaluation of organisational capabilities against this framework, preparations
+are actively underway to commission an independent, third-party maturity assessment. The
+
+                                                   5
+[[PDFPAGE 8]]
+forthcoming insights from this strategic exercise will serve as the baseline for diagnosing process
+gaps and engineering targeted, data-driven interventions in the near future.
+
+ENTERPRISE RISK MANAGEMENT
+Risk Monitoring phase of the Annual Risk Cycle for FY 2025–26 continued, focusing on the sustained
+oversight of enterprise risks and the progression of established mitigation strategies. Stakeholders
+were engaged to accelerate the implementation of agreed-upon risk treatment strategies for the
+enterprise risks. In parallel, the second biannual corporate risk appetite test - covering the July to
+December 2025 period - was completed to evaluate risk alignment for the first half of the fiscal year.
+
+Complementing these efforts, the enterprise-wide risk culture survey was also concluded, providing
+the necessary data to analyse employee attitudes and decision-making behaviours as part of the
+ongoing risk culture initiative.
+
+BUSINESS CONTINUITY MANAGEMENT (BCM)
+The Company made significant progress toward its strategic objective of achieving ISO 22301:2019
+certification for its Business Continuity Management System (BCMS). Following a third-party gap
+analysis conducted across key operational sites and offices, the Company achieved satisfactory
+compliance level, reflecting strong alignment with international standards while identifying targeted
+areas for further improvement.
+
+To enhance organisational preparedness, the Company circulated the updated version of “Business
+Continuity Teams Roles & Responsibilities” across all locations, ensuring clearly defined
+responsibilities and a coordinated response in the event of disruption. In parallel, employees from
+eight locations were trained as BCMS lead auditors through an IRCA-approved program,
+strengthening BCMS internal audit capabilities and supporting the continual improvement of the
+BCMS framework.
+CORPORATE SOCIAL RESPONSIBILITY
+
+The Company continued to work for promotion of education and uplift of communities at its producing
+and exploratory areas across the country and provided funding for (i) 64 scholarships to students
+belonging to Balochistan province for study from primary up to higher secondary level (ii) skills
+development and international placements of 50 local youth through Balochistan Technical and
+Vocational Training Authority; (iii) rehabilitation of 14 healthcare and education facilities in Dera Bugti;
+(iv) Pakistan Hindu Council for development of physiotherapy labs in Tharparkar; and (v) Chal
+Foundation for running operations of Battagram Rehabilitation Centre.
+
+Further, the Company continued operating Mobile Medical Units at Kandhkot, Gambat South,
+Mazarani, Dhok Sultan and Public Dispensary Mastala near Adhi field benefiting over 30,000 patients.
+Women Vocational Training Centre near Adhi field continued to provide trainings to the local women
+which enable them to become self-reliant.
+
+Furthermore, 18,000 Ramazan ration bags were distributed amongst 90,000 underprivileged people
+residing around operational areas of the Company.
+
+QUALITY, HEALTH, SAFETY AND ENVIRONMENT (QHSE)
+
+Multiple Initial Environmental Examination (IEE) studies were conducted, and NOCs/extensions from
+environmental protection agencies were successfully obtained to support the Company’s strategic
+development work program. In addition, safety talks, training sessions, and awareness programs
+were held across the organisation to enhance QHSE awareness, including (i) marine safety for oil
+
+
+                                                     6
+[[PDFPAGE 9]]
+and gas operations (ii) emergency drills at head office and first aid sessions for emergency response
+teams.
+With respect to asset integrity, the Corrosion Monitoring System (CP) module has been integrated
+into the Asset Integrity Management System dashboard to enhance real-time decision-making.
+Significant progress has also been made in establishing well integrity baselines for the Sui and
+Kandhkot fields through data revalidation, including annulus bleed-off and pressure build-up activities.
+These initiatives remain focused on strengthening asset management practices and achieving ISO
+55001 certification.
+In addition, 13.65 million safe manhours were completed (including contractors) by the end of
+March 31, 2026.
+ENVIRONMENTAL, SOCIAL, AND GOVERNANCE (ESG)
+To strengthen ESG implementation, several initiatives have been undertaken, including a satellite-
+based methane monitoring campaign at five field locations, expansion of the Velocity EHS reporting
+module across all corporate and exploration sites, implementation of a Leak Detection and Repair
+(LDAR) program, and the pursuit of carbon credit opportunities. Additionally, climate-related scenario
+analysis was conducted at the enterprise level, drawing on the latest approved Five-Year Strategic
+Plan to model a range of climate-related scenarios. The analysis affirmed that effective climate risk
+management necessitates the systematic embedding of climate considerations into investment
+decisions, governance structures, and stakeholder communications.
+INDUSTRIAL RELATIONS
+Conducive working environment and cordial industrial relations prevailed at all locations of the
+Company.
+SUBSEQUENT EVENTS
+Dividend
+The Board of Directors in its meeting held on April 29, 2026, has approved third interim cash dividend
+@ 20% amounting to Rs 5,441.946 million on the paid-up value of ordinary share capital. This is in
+addition to interim cash dividends of Rs. 4 per share (40%) on ordinary shares and Rs. 3 per share
+(30%) on convertible preference shares already declared and paid during the period.
+ACKNOWLEDGEMENT
+
+We extend our sincerest gratitude to all stakeholders, including the Government of Pakistan, for their
+trust and confidence. Their solid support has been instrumental in keeping us on course towards the
+accomplishment of our strategic objectives. In the face of substantial economic and business
+challenges, the Company remains resolute in navigating through them, thanks to the collective efforts
+of all relevant stakeholders.
+Further, we wish to express appreciation to our dedicated employees whose steadfast commitment
+to excellence deserves commendation. We also extend our gratitude to all other stakeholders for their
+continued support and cooperation, which remain invaluable to our ongoing progress and long-term
+objectives.
+
+
+
+
+DIRECTOR                                               MANAGING DIRECTOR /
+                                                       CHIEF EXECUTIVE OFFICER
+Karachi: April 29, 2026
+                                                   7
+[[PDFPAGE 10]]
+[[PDFPAGE 11]]
+[[PDFPAGE 12]]
+[[PDFPAGE 13]]
+[[PDFPAGE 14]]
+[[PDFPAGE 15]]
+[[PDFPAGE 16]]
+[[PDFPAGE 17]]
+[[PDFPAGE 18]]
+[[PDFPAGE 19]]
+[[PDFPAGE 20]]
+[[PDFPAGE 21]]
+[[PDFPAGE 22]]
+[[PDFPAGE 23]]
+[[PDFPAGE 24]]
+[[PDFPAGE 25]]
+[[PDFPAGE 26]]
+[[PDFPAGE 27]]
+Notes to and Forming Part of the Condensed Unconsolidated Interim
+Financial Statements (Unaudited)
+For the nine months period ended March 31, 2026
+
+
+
+                                                                                      March 31,           June 30,
+                                                                                        2026                2025
+                                                                                      Unaudited           Audited
+                                                                                          (Rupees in thousand)
+6.         LONG-TERM INVESTMENTS
+           Investments in related parties
+           -    Wholly owned subsidiaries
+               - PPPFTC                                                                           1                    1
+               - PPLE (net of impairment)                                                 3,798,094            3,798,094
+               - PPLA (net of impairment)                                                 3,211,033            3,211,033
+                                                                                          7,009,128            7,009,128
+           -    Associates
+                 Unquoted companies
+               - Pakistan International Oil Limited (PIOL) - note 6.1
+                 Equity held: 25%
+                 No. of shares: 10,000,000 (June 30, 2025: 8,500,000) of
+                 USD 10/- each                                                           23,491,608          19,893,941
+               - Pakistan Minerals (Private) Limited (PMPL) - note 6.2
+                 Equity held: 33.33%
+                 No. of shares: 516,420,680 (June 30, 2025: 516,420,680) of
+                 Rs 10/- each                                                            82,695,193          62,765,740
+                                                                                        113,195,929          89,668,809
+
+6.1        Total equity investment of the Company in the associate amounts to USD 100 million (Rs 24,646.999 million)
+           {June 30, 2025: USD 85 million (Rs 20,452.249 million)}, thereby fulfilling its initial commitment as per the
+           Shareholders’ Agreement. These investments have been recorded net of cumulative share of loss of associate
+           amounting to Rs 2,971.740 million (June 30, 2025: Rs 2,696.459 million), charged to statement of profit or loss
+           up to the period ended March 31, 2026, and cumulative exchange gain on translation of foreign associate, as at
+           reporting date, amounting to Rs 1,816.349 million (June 30, 2025: Rs 2,138.151 million) recorded through other
+           comprehensive income to translation reserve. The loss for the period mainly pertains to exploration and
+           appraisal expenses incurred by PIOL.
+
+6.2        The Company’s equity interest in PMPL is 33.33% with an effective interest of 8.33% in Reko Diq Mining
+           Company (Private) Limited. Further to the information disclosed in note 6.5 to the annual audited
+           unconsolidated financial statements for the year ended June 30, 2025, during the period, the Company has
+           made equity investment in PMPL amounting to Rs 21,100.456 million which has increased the total equity
+           investment of the Company in the associate to Rs 75,166.226 million as at March 31, 2026 (June 30, 2025:
+           Rs 54,065.770 million). These investments have been recorded net of cumulative share of loss of associate
+           amounting to Rs 3,640.207 million (June 30, 2025: Rs 3,265.310 million), charged to statement of profit or loss
+           up to the period ended March 31, 2026, and share of cumulative exchange gain on translation of foreign
+           operation of PMPL, as at reporting date, amounting to Rs 11,169.174 million (June 30, 2025: Rs 11,965.280
+           million) recorded through other comprehensive income. The operator continues to review all aspects of the
+           project including security situation, capital requirements, project financing, project scope and timelines.
+
+
+
+
+Page | 4
+[[PDFPAGE 28]]
+[[PDFPAGE 29]]
+[[PDFPAGE 30]]
+Notes to and Forming Part of the Condensed Unconsolidated Interim
+Financial Statements (Unaudited)
+For the nine months period ended March 31, 2026
+
+
+                                                                                        March 31,           June 30,
+                                                                                          2026               2025
+                                                                                        Unaudited           Audited
+                                                                                            (Rupees in thousand)
+9.         TRADE AND OTHER PAYABLES
+           Creditors                                                                        1,055,431           1,290,452
+           Accrued liabilities                                                              8,650,578          13,621,482
+           Accrued mark-up / profit on long - term financing                                    4,446               5,353
+           Security deposits / advances from LPG distributors                               1,201,147           1,052,480
+           Retention money                                                                    666,283             192,942
+           Royalties                                                                        3,985,107           4,082,879
+           Lease extension bonus - Sui gas field                                            4,456,059             374,226
+           Current accounts with joint operations                                          14,989,177          17,368,824
+           Staff retirement benefit funds                                                   5,585,046           5,636,492
+           Provision for windfall levy on oil / condensate                                 39,404,703          36,304,674
+           Federal excise duty                                                                 59,792               9,612
+           Workers' Profit Participation Fund (WPPF)                                        4,695,517                 -
+           Others                                                                             326,579             241,271
+                                                                                           85,079,865          80,180,687
+
+9.1        As disclosed in note 23.1 to the unconsolidated financial statements for the year ended June 30, 2025, trade
+           and other payables do not include GDS amounting to Rs 78,673 million (June 30, 2025: Rs 81,594 million) as
+           the obligation of the Company is to pay the collected amounts to the GoP on receipt basis. The said amount
+           has not been paid to the GoP due to non-payment of the same by GENCO-II as at the date of condensed
+           unconsolidated interim statement of financial position.
+
+10.        CONTINGENCIES AND COMMITMENTS
+
+           There are no major changes in the status of contingencies and in commitments as disclosed in the annual
+           unconsolidated financial statements as at and for the year ended June 30, 2025, except for the following:
+
+10.1       During the period, the Company has received various orders from the tax authorities, raising a demand of
+           Rs 517 million on account of sales tax for different tax periods under the relevant provisions of the Sales Tax
+           Act, 1990. Being aggrieved, the Company has filed appeals before the Commissioner Inland Revenue, Appeals
+           (CIRA).
+
+           During the period, tax authorities while amending the assessments for tax years 2020, 2021, 2022, 2024 and
+           2025 created aggregate tax demand of Rs 6,945 million primarily on account of rate issue, provision for windfall,
+           depletion allowance on account of gathering and processing charges and super tax. The said tax demands were
+           paid by the Company under protest. Being aggrieved, the Company has filed appeals before the CIRA.
+           During the year ended June 30, 2025, the Company’s tax return for tax year 2023 was selected for income tax
+           audit. During the period, the tax authorities passed an order by raising tax demand of Rs 1,006 million mainly
+           relating to disallowance of depletion allowance on account of deduction of gathering and processing charges.
+           The said tax demand has been paid by the Company under protest. Being aggrieved, the Company has filed
+           the appeal before the CIRA.
+
+           During the period, the Federal Constitutional Court of Pakistan (FCC) while deciding the constitutional petitions
+           on super tax has held that section 4B and 4C of the Income Tax Ordinance, 2001 (ITO) will only apply to
+           income of E&P companies if it does not result in exceeding the aggregate rate of tax provided in Fifth Schedule
+           of ITO and respective Petroleum Concession Agreements (PCAs). Subsequent to period end, the tax
+           authorities have issued amended assessment orders for tax years 2022 till 2024 raising aggregate tax demand
+           of Rs 18,053 million. The Company considers the demands to be unreasonable and is in the process of
+           contesting them under applicable law. Based on initial assessment, the Company is of the view that no adverse
+           financial adjustment arises in the financial statements.
+           Subsequent to the period end, the tax authorities have amended the assessment orders for tax years 2021 to
+           2024 treating unrecorded Late Payment Surcharge (LPS) on overdue receivables from the Company’s
+           customers as taxable income, raising an aggregate tax demand of Rs 59,074 million. The said LPS does not
+           meet the income recognition criteria under IFRS 15, Company’s accounting policy and accounting treatment is
+           in line with the industry practice. The Company has filed a Constitutional Petition in Sindh High Court (SHC) and
+           has obtained status-quo order. Based on the advice of its legal counsel, the Company is confident that it has
+           sound grounds to contest the matter, accordingly no provision has been made in these financial statements.
+
+
+
+
+Page | 7
+[[PDFPAGE 31]]
+[[PDFPAGE 32]]
+[[PDFPAGE 33]]
+[[PDFPAGE 34]]
+[[PDFPAGE 35]]
+[[PDFPAGE 36]]
+[[PDFPAGE 37]]
+The Board of Directors in its meeting held on April 29, 2026, has approved interim cash dividend @ 20% amounting
+to Rs 5,441.946 million on the paid-up value of ordinary share capital.
+[[PDFPAGE 38]]
+[[PDFPAGE 39]]
+[[PDFPAGE 40]]
+[[PDFPAGE 41]]
+[[PDFPAGE 42]]
+[[PDFPAGE 43]]
+[[PDFPAGE 44]]
+[[PDFPAGE 45]]
+[[PDFPAGE 46]]
+NOTES TO AND FORMING PART OF THE CONDENSED CONSOLIDATED INTERIM
+FINANCIAL STATEMENTS (UNAUDITED)
+For the nine months period ended March 31, 2026
+
+                                                                                        March 31,           June 30,
+                                                                                          2026                2025
+                                                                                        Unaudited           Audited
+                                                                                            (Rupees in thousand)
+5.         PROPERTY, PLANT AND EQUIPMENT
+
+           Opening Net Book Value (NBV)                                                    88,422,758          90,107,928
+           Additions during the period / year - net                                        19,252,612          15,414,648
+                                                                                          107,675,370         105,522,576
+           Disposals during the period / year (NBV)                                            (1,054)            (17,204)
+           Exchange differences / reclassifications during the period / year (NBV)             (9,901)             14,011
+           Depreciation / amortisation charged during the period / year                   (16,280,907)        (17,096,625)
+                                                                                           91,383,508          88,422,758
+           Capital work-in-progress - note 5.1                                             62,452,234          55,977,003
+                                                                                          153,835,742         144,399,761
+
+5.1        Capital work-in-progress
+           Plant, machinery, fittings and pipelines                                        16,002,916          12,722,370
+           Exploration and evaluation (E&E) assets                                         22,603,684          18,380,041
+           Development and production (D&P) assets                                          6,354,660          10,187,888
+           Lands, buildings and civil constructions                                           252,738             191,670
+           Advances to suppliers                                                              574,597             611,849
+           Capital stores for drilling and development                                     16,663,639          14,074,171
+            - Net impairment loss                                                                 -              (190,986)
+                                                                                           16,663,639          13,883,185
+                                                                                           62,452,234          55,977,003
+
+6.         LONG-TERM INVESTMENTS
+           Investments in related parties
+           - Wholly owned subsidiary
+             - PPPFTC                                                                                1                   1
+
+           - Associates
+             Unquoted companies
+             - Pakistan International Oil Limited (PIOL) - note 6.1
+               Equity held: 25%
+               No. of shares: 10,000,000 (June 30, 2025: 8,500,000) of
+               USD 10/- each                                                               23,491,608          19,893,941
+
+             - Pakistan Minerals (Private) Limited (PMPL) - note 6.2
+               Equity held: 33.33%
+               No. of shares: 516,420,680 (June 30, 2025: 516,420,680) of
+               Rs 10/- each                                                                82,695,193          62,765,740
+                                                                                          106,186,802          82,659,682
+
+6.1        Total equity investment of the Holding Company in the associate amounts to USD 100 million
+           (Rs 24,646.999 million) {June 30, 2025: USD 85 million (Rs 20,452.249 million)}, thereby fulfilling its initial
+           commitment as per the Shareholders’ Agreement. These investments have been recorded net of cumulative
+           share of loss of associate amounting to Rs 2,971.740 million (June 30, 2025: Rs 2,696.459 million), charged to
+           statement of profit or loss up to the period ended March 31, 2026, and cumulative exchange gain on translation of
+           foreign associate, as at reporting date, amounting to Rs 1,816.349 million (June 30, 2025: Rs 2,138.151 million)
+           recorded through other comprehensive income to translation reserve. The loss for the period mainly pertains to
+           exploration and appraisal expenses incurred by PIOL.
+
+
+
+
+Page I 4
+[[PDFPAGE 47]]
+[[PDFPAGE 48]]
+[[PDFPAGE 49]]
+NOTES TO AND FORMING PART OF THE CONDENSED CONSOLIDATED INTERIM
+FINANCIAL STATEMENTS (UNAUDITED)
+For the nine months period ended March 31, 2026
+
+
+                                                                                           March 31,           June 30,
+                                                                                             2026                2025
+                                                                                           Unaudited           Audited
+                                                                                               (Rupees in thousand)
+9.         TRADE AND OTHER PAYABLES
+
+           Creditors                                                                          1,055,431            1,290,452
+           Accrued liabilities                                                                9,185,460           14,135,214
+           Accrued mark-up / profit on long-term financing                                        4,446                5,353
+           Security deposits / advances from LPG distributors                                 1,201,147            1,052,480
+           Retention money                                                                      666,283              192,942
+           Royalties                                                                          4,036,512            4,132,795
+           Lease extension bonus - Sui gas field                                              4,456,059              374,226
+           Current accounts with joint operations                                            16,104,194           18,783,491
+           Staff retirement benefit funds                                                     5,585,046            5,636,492
+           Provision for windfall levy on oil / condensate                                   39,404,703           36,304,674
+           Federal excise duty                                                                   59,792                9,612
+           Workers' Profit Participation Fund (WPPF)                                          4,695,517                  -
+           Others                                                                               394,489              309,522
+                                                                                             86,849,079           82,227,253
+
+9.1        As disclosed in note 24.1 to the consolidated financial statements for the year ended June 30, 2025, trade and
+           other payables do not include GDS amounting to Rs 78,673 million (June 30, 2025: Rs 81,594 million) as the
+           obligation of the Holding Company is to pay the collected amounts to the GoP on receipt basis. The said amount
+           has not been paid to the GoP due to non-payment of the same by GENCO-II as at the date of condensed
+           consolidated interim statement of financial position.
+
+10.        CONTINGENCIES AND COMMITMENTS
+           There are no major changes in the status of contingencies and in commitments as disclosed in the annual
+           consolidated financial statements as at and for the year ended June 30, 2025, except for the following:
+
+10.1       During the period, the Holding Company has received various orders from the tax authorities, raising a demand of
+           Rs 517 million on account of sales tax for different tax periods under the relevant provisions of the Sales Tax Act,
+           1990. Being aggrieved, the Holding Company has filed appeals before the Commissioner Inland Revenue,
+           Appeals (CIRA).
+
+           During the period, tax authorities while amending the assessments for tax years 2020, 2021, 2022, 2024 and
+           2025 created aggregate tax demand of Rs 6,945 million primarily on account of rate issue, provision for windfall,
+           depletion allowance on account of gathering and processing charges and super tax. The said tax demands were
+           paid by the Holding Company under protest. Being aggrieved, the Holding Company has filed appeals before the
+           CIRA.
+           During the year ended June 30, 2025, the Holding Company’s tax return for tax year 2023 was selected for
+           income tax audit. During the period, the tax authorities passed an order by raising tax demand of Rs 1,006 million
+           mainly relating to disallowance of depletion allowance on account of deduction of gathering and processing
+           charges. The said tax demand has been paid by the Holding Company under protest. Being aggrieved, the
+           Holding Company has filed the appeal before the CIRA.
+
+           During the period, the Federal Constitutional Court of Pakistan (FCC) while deciding the constitutional petitions on
+           super tax has held that section 4B and 4C of the Income Tax Ordinance, 2001 (ITO) will only apply to income of
+           E&P companies if it does not result in exceeding the aggregate rate of tax provided in Fifth Schedule of ITO and
+           respective Petroleum Concession Agreements (PCAs). Subsequent to period end, the tax authorities have issued
+           amended assessment orders for tax years 2022 till 2024 raising aggregate tax demand of Rs 18,053 million. The
+           Holding Company considers the demands to be unreasonable and is in the process of contesting them under
+           applicable law. Based on initial assessment, the Holding Company is of the view that no adverse financial
+           adjustment arises in the financial statements.
+
+           Subsequent to the period end, the tax authorities have amended the assessment orders for tax years 2021 to
+           2024 treating unrecorded Late Payment Surcharge (LPS) on overdue receivables from the Holding Company’s
+           customers as taxable income, raising an aggregate tax demand of Rs 59,074 million. The said LPS does not meet
+           the income recognition criteria under IFRS 15, Holding Company’s accounting policy and accounting treatment is
+           in line with the industry practice. The Holding Company has filed a Constitutional Petition in Sindh High Court
+           (SHC) and has obtained status-quo order. Based on the advice of its legal counsel, the Holding Company is
+           confident that it has sound grounds to contest the matter, accordingly no provision has been made in these
+           financial statements.
+
+Page I 7
+[[PDFPAGE 50]]
+[[PDFPAGE 51]]
+[[PDFPAGE 52]]
+[[PDFPAGE 53]]
+[[PDFPAGE 54]]
+[[PDFPAGE 55]]
+The Board of Directors of the Holding Company in its meeting held on April 29, 2026, has approved interim cash dividend @
+20% amounting to Rs 5,441.946 million on the paid-up value of ordinary share capital.
+[[PDFPAGE 56]]
+PAKISTAN PETROLEUM LIMITED
+PIDC House, Dr. Ziauddin Ahmed Road
+P.O Box 3942, Karachi-75530, Pakistan
+UAN: + 92-21-111-568-568
+Fax: + 92-21-35680005, 35682125
+Website: www.ppl.com.pk
+
