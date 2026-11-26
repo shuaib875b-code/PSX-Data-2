@@ -16,8 +16,8 @@ for s in syms:
                 (OUT / f"{s}.json").write_text(json.dumps([[x[0], x[1], x[2]] for x in j], separators=(",", ":")))
                 idx[s] = {"rows": len(j), "first": j[-1][0], "last": j[0][0], "retrieved": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%MZ"), "http": r.status_code}
                 print(s, len(j)); break
-            print(s, "empty", r.status_code)
-        except Exception as e: print(s, "err", str(e)[:80])
+            print(s, "empty", r.status_code, r.headers.get("content-type"), r.text[:150].replace("\n"," "))
+        except Exception as e: print(s, "err", repr(e)[:150])
         time.sleep(2)
     time.sleep(0.4)
 idx_p.write_text(json.dumps(idx, indent=1))
