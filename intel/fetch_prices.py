@@ -1,23 +1,20 @@
-"""Fetch DPS end-of-day price history (timestamp, close, volume) for companies without prices in tech/ohlcv_universe.csv, plus KSE100/KMI30.
-Source: dps.psx.com.pk/timeseries/eod/SYM. Output: state/intel_prices/SYM.json = [[epoch, close, volume], ...] with retrieval stamp in index."""
-import json, sys, time, pathlib, datetime, requests
-OUT = pathlib.Path("state/intel_prices"); OUT.mkdir(parents=True, exist_ok=True)
-syms = sys.argv[1].split(",") if len(sys.argv) > 1 and sys.argv[1] else []
-shard, n = (int(sys.argv[2]), int(sys.argv[3])) if len(sys.argv) > 3 else (0, 1)
-syms = (["KSE100", "KMI30"] if shard == 0 else []) + [s for i, s in enumerate(x for x in syms if x) if i % n == shard]
-H = {"User-Agent": "Mozilla/5.0", "X-Requested-With": "XMLHttpRequest", "Accept": "application/json, text/plain, */*"}
-idx_p = OUT / f"_index_{shard}.json"; idx = json.loads(idx_p.read_text()) if idx_p.exists() else {}
-for s in syms:
-    for a in range(2):
-        try:
-            r = requests.get(f"https://dps.psx.com.pk/timeseries/eod/{s}", headers={**H, "Referer": f"https://dps.psx.com.pk/company/{s}"}, timeout=15)
-            j = r.json().get("data") or []
-            if j:
-                (OUT / f"{s}.json").write_text(json.dumps([[x[0], x[1], x[2]] for x in j], separators=(",", ":")))
-                idx[s] = {"rows": len(j), "first": j[-1][0], "last": j[0][0], "retrieved": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%MZ"), "http": r.status_code}
-                print(s, len(j)); break
-            print(s, "empty", r.status_code, r.headers.get("content-type"), r.text[:150].replace("\n"," "))
-        except Exception as e: print(s, "err", repr(e)[:150])
-        time.sleep(2)
-    time.sleep(0.4)
-idx_p.write_text(json.dumps(idx, indent=1))
+"""Backfill daily prices (open/high/low/close/volume/prev) for symbols missing from tech/ohlcv_universe.csv,
+from the same official source the daily job uses (dps.psx.com.pk/download/mkt_summary/DATE.Z). Sharded by date.
+Output: state/intel_prices/part_<shard>.csv  (same columns as ohlcv_universe.csv)."""
+import sys, csv, pathlib, datetime as dt
+sys.path.insert(0, "tech")
+import history
+syms = set(x for x in sys.argv[1].split(",") if x); shard, n = int(sys.argv[2]), int(sys.argv[3])
+start, end = dt.date(2022, 1, 3), dt.date.today()
+days = [start + dt.timedelta(i) for i in range((end - start).days + 1)]
+days = [d for d in days if d.weekday() < 5][shard::n]
+out = pathlib.Path("state/intel_prices"); out.mkdir(parents=True, exist_ok=True)
+rows, fails = [], []
+for d in days:
+    r = history.fetch_day(d, syms)
+    if r is None: fails.append(d.isoformat())
+    else: rows += r
+with open(out / f"part_{shard}.csv", "w", newline="") as f:
+    w = csv.writer(f); w.writerow(history.HEAD); w.writerows(rows)
+(out / f"fails_{shard}.txt").write_text("\n".join(fails))
+print("shard", shard, "days", len(days), "rows", len(rows), "failed", len(fails))
