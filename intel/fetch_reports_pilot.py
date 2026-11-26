@@ -79,7 +79,7 @@ def to_text(pdf_bytes):
         ocr = False
         if pages and body / max(pages, 1) >= 400 and os.environ.get("MIXED_OCR", "1") == "1":     # text layer present, but statement pages can be pictures: OCR only the near-empty pages
             weak = [i for i, x in enumerate(parts) if len(re.sub(r"\s|\[\[PDFPAGE[^\]]*\]\]", "", x)) < 150 and " L" not in x[:20] and " R" not in x[:20]][:120]
-            if weak and len(weak) < 0.6 * pages:
+            if weak and len(weak) < 0.97 * pages:
                 from concurrent.futures import ThreadPoolExecutor
                 env = dict(os.environ, OMP_THREAD_LIMIT="1")
                 def runp(i):
