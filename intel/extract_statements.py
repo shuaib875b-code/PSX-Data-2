@@ -161,11 +161,14 @@ def extract_doc(txt):
 def main(symbols):
     OUT.mkdir(parents=True, exist_ok=True)
     idx = json.load(open(RAW / "index.json"))
+    for f_ in sorted((RAW.parent / "reports_index").glob("*.json")):
+        for s_, d_ in json.load(open(f_)).items(): idx.setdefault(s_, {}).update(d_)
     for sym in symbols:
-        res = {}
+        res = json.load(open(OUT / f"{sym}.json")) if (OUT / f"{sym}.json").exists() else {}
         for key, meta in idx.get(sym, {}).items():
             if meta.get("status") != "ok":
                 continue
+            if not (RAW / sym / f"{key}.txt.gz").exists(): continue
             txt = gzip.open(RAW / sym / f"{key}.txt.gz", "rt", errors="ignore").read()
             sts = extract_doc(txt)
             res[key] = {"kind": meta["kind"], "period_end": meta.get("period_end"), "date_public": meta.get("date_public"), "date_note": meta.get("date_note"),

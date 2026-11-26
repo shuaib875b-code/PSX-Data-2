@@ -81,10 +81,19 @@ def to_text(pdf_bytes):
             ocr = True
             if os.environ.get("NO_OCR") == "1":
                 return "\f".join(f"[[PDFPAGE {i + 1}]]" for i in range(pages)) + "\f", pages, True, spreads
-            subprocess.run(["pdftoppm", "-r", "300", "-gray", "-png", p, os.path.join(d, "pg")], check=False)
-            out = []
-            for i, f in enumerate(sorted(x for x in os.listdir(d) if x.startswith("pg") and x.endswith(".png"))):
-                out.append(f"[[PDFPAGE {i + 1}]]\n" + subprocess.run(["tesseract", os.path.join(d, f), "-", "--psm", "6"], capture_output=True).stdout.decode("utf8", "ignore"))
+            dpi = os.environ.get("OCR_DPI", "200"); maxp = int(os.environ.get("OCR_MAXPAGES", "0")) or None
+            cmd = ["pdftoppm", "-r", dpi, "-gray", "-png"] + (["-l", str(maxp)] if maxp else []) + [p, os.path.join(d, "pg")]
+            subprocess.run(cmd, check=False)
+            files = sorted(x for x in os.listdir(d) if x.startswith("pg") and x.endswith(".png"))
+            from concurrent.futures import ThreadPoolExecutor
+            env = dict(os.environ, OMP_THREAD_LIMIT="1")
+            def run(f):
+                try: return subprocess.run(["tesseract", os.path.join(d, f), "-", "--psm", "6"], capture_output=True, env=env, timeout=240).stdout.decode("utf8", "ignore")
+                except Exception: return ""
+            with ThreadPoolExecutor(4) as ex:
+                texts = list(ex.map(run, files))
+            out = [f"[[PDFPAGE {i + 1}]]\n" + t for i, t in enumerate(texts)]
+            out += [f"[[PDFPAGE {i + 1}]]" for i in range(len(out), pages)]      # pages beyond the OCR limit: marker only
             txt = "\f".join(out) + "\f"
             pages = len(out)
         return txt, pages, ocr, spreads
@@ -113,10 +122,17 @@ def main(argv):
     OUT.mkdir(parents=True, exist_ok=True)
     ip = OUT / "index.json"
     idx = json.load(open(ip)) if ip.exists() else {}
+    for f_ in sorted((STATE / "intel_raw" / "reports_index").glob("*.json")):
+        for s_, d_ in json.load(open(f_)).items(): idx.setdefault(s_, {}).update(d_)
+    only_ocr = os.environ.get("ONLY_OCR") == "1"; kinds = tuple(os.environ.get("OCR_KINDS", "quarterly").split(","))
+    touched = {}
     for s in syms:
         for j in pick(s, nA, nQ, F, D):
             path = OUT / s / f"{j['key']}.txt.gz"
-            if path.exists() and not (os.environ.get("REOCR") == "1" and idx.get(s, {}).get(j["key"], {}).get("ocr")):
+            if only_ocr:
+                m_ = idx.get(s, {}).get(j["key"], {})
+                if not (m_.get("ocr") and m_.get("status") == "ok" and not m_.get("ocr_done") and j["kind"].startswith(kinds)): continue
+            elif path.exists() and not (os.environ.get("REOCR") == "1" and idx.get(s, {}).get(j["key"], {}).get("ocr")):
                 continue
             try:
                 r = dl(j["url"])
@@ -126,12 +142,16 @@ def main(argv):
                 (OUT / s).mkdir(exist_ok=True)
                 with gzip.open(path, "wb", 9) as g:
                     g.write(txt.encode())
-                idx.setdefault(s, {})[j["key"]] = {**j, "status": "ok", "retrieved": now(), "sha256": hashlib.sha256(r.content).hexdigest(), "bytes": len(r.content), "pages": pages, "spread_pages": spreads, "chars": len(txt), "ocr": ocr}
+                idx.setdefault(s, {})[j["key"]] = {**j, "status": "ok", "retrieved": now(), "sha256": hashlib.sha256(r.content).hexdigest(), "bytes": len(r.content), "pages": pages, "spread_pages": spreads, "chars": len(txt), "ocr": ocr, "ocr_done": bool(ocr and os.environ.get("NO_OCR") != "1")}
+                touched.setdefault(s, {})[j["key"]] = idx[s][j["key"]]
                 print(s, j["key"], j["kind"], j["period_end"], "pages", pages, "spreads", spreads, "chars", len(txt), "OCR" if ocr else "", flush=True)
             except Exception as e:  # noqa
                 print(s, j["key"], "ERROR", repr(e)[:150]); idx.setdefault(s, {})[j["key"]] = {**j, "status": "error", "error": repr(e)[:200], "retrieved": now()}
             json.dump(idx, open(ip, "w"), indent=1)
     json.dump(idx, open(ip, "w"), indent=1)
+    if only_ocr and touched:
+        (STATE / "intel_raw" / "reports_index").mkdir(parents=True, exist_ok=True)
+        json.dump(touched, open(STATE / "intel_raw" / "reports_index" / f"ocr_{os.environ.get('SHARD', '0')}.json", "w"), separators=(",", ":"))
 
 
 if __name__ == "__main__":
