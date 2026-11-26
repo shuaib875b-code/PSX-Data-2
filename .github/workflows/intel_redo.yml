@@ -3,8 +3,8 @@ on:
   workflow_dispatch:
     inputs:
       symbols:
-        description: "comma list"
-        required: true
+        description: "comma list, or ALL = every company with a report that gave no statements"
+        default: "ALL"
 permissions:
   contents: write
 concurrency:
@@ -13,7 +13,11 @@ concurrency:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 300
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -24,13 +28,23 @@ jobs:
         env:
           REFETCH_EMPTY: "1"
         run: |
-          python intel/fetch_reports_pilot.py "${{ github.event.inputs.symbols }}" --annual 5 --quarterly 8
-          python intel/extract_statements.py "${{ github.event.inputs.symbols }}"
+          SYMS=$(python3 - <<'PY'
+          import json, glob, os
+          want = "${{ github.event.inputs.symbols }}"
+          if want != "ALL": print(want); raise SystemExit
+          L = sorted(os.path.basename(f)[:-5] for f in glob.glob("state/intel_extract/*.json") if any(not v.get("statements") for v in json.load(open(f)).values()))
+          print(",".join(L[${{ matrix.shard }}::16]))
+          PY
+          )
+          echo "$SYMS" > /tmp/syms; echo "shard ${{ matrix.shard }}: $SYMS"
+          [ -z "$SYMS" ] && exit 0
+          python intel/fetch_reports_pilot.py "$SYMS" --annual 5 --quarterly 8
+          python intel/extract_statements.py "$SYMS"
           python3 - <<'PY'
           import json
           idx = json.load(open("state/intel_raw/reports_text/index.json"))
-          syms = "${{ github.event.inputs.symbols }}".split(",")
-          json.dump({s: idx[s] for s in syms if s in idx}, open("state/intel_raw/reports_index/redo_${{ github.run_id }}.json", "w"), separators=(",", ":"))
+          syms = open("/tmp/syms").read().strip().split(",")
+          json.dump({s: idx[s] for s in syms if s in idx}, open("state/intel_raw/reports_index/redo_${{ github.run_id }}_${{ matrix.shard }}.json", "w"), separators=(",", ":"))
           PY
       - name: Commit
         if: always()
@@ -38,5 +52,5 @@ jobs:
           git config user.name "psx-bot"; git config user.email "bot@users.noreply.github.com"
           git checkout -- state/intel_raw/reports_text/index.json 2>/dev/null || true
           git add state/intel_extract state/intel_raw/reports_index
-          git commit -m "Intel redo ${{ github.run_id }}" || echo none
+          git commit -m "Intel redo ${{ github.run_id }} shard ${{ matrix.shard }}" || echo none
           for i in 1 2 3 4 5 6 7 8; do git pull --rebase -q && git push -q && break || { git rebase --abort 2>/dev/null; sleep $((RANDOM % 20 + 10)); }; done
