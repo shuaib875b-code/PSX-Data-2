@@ -46,5 +46,5 @@ for sym, key, v in todo:
         print(sym, key, V, [(s["type"], s["basis"][:4], len(s["rows"])) for s in sts], flush=True)
     except Exception as ex_: print("ERR", sym, key, repr(ex_)[:120], flush=True)
 for sym, d in res.items():
-    p = OUT / f"{sym}.json"; old = json.load(open(p)) if p.exists() else {}
+    p = OUT / f"{sym}__{shard}.json"; old = {}
     old.update(d); json.dump(old, open(p, "w"), separators=(",", ":"))
