@@ -170,7 +170,12 @@ def main(symbols):
                 continue
             if not (RAW / sym / f"{key}.txt.gz").exists(): continue
             txt = gzip.open(RAW / sym / f"{key}.txt.gz", "rt", errors="ignore").read()
-            sts = extract_doc(txt)
+            import signal
+            def _to(*a): raise TimeoutError()
+            signal.signal(signal.SIGALRM, _to); signal.alarm(300)
+            try: sts = extract_doc(txt)
+            except TimeoutError: print("EXTRACT TIMEOUT", sym, key, flush=True); continue
+            finally: signal.alarm(0)
             res[key] = {"kind": meta["kind"], "period_end": meta.get("period_end"), "date_public": meta.get("date_public"), "date_note": meta.get("date_note"),
                         "source": meta["source"], "url": meta["url"], "pdf_sha256": meta.get("sha256"), "ocr": meta.get("ocr", False), "statements": sts}
             print(sym, key, meta["kind"][:4], meta.get("period_end"), [(s["type"], s["basis"][:4], len(s["rows"])) for s in sts], flush=True)
