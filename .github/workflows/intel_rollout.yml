@@ -17,7 +17,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: intel-rollout
+  group: intel-rollout-${{ github.run_id }}
   cancel-in-progress: false
 jobs:
   plan:
@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 330
     strategy:
-      max-parallel: 1
+      max-parallel: 8
       fail-fast: false
       matrix:
         b: ${{ fromJSON(needs.plan.outputs.m) }}
