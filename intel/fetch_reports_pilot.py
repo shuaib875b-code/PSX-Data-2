@@ -152,7 +152,7 @@ def main(argv):
             elif os.environ.get("REFETCH_EMPTY") == "1":
                 try: _ex = json.load(open(STATE / "intel_extract" / f"{s}.json")).get(j["key"])
                 except Exception: _ex = None
-                if _ex is None or _ex.get("statements"): continue
+                if _ex is None or ({"IS", "BS"} <= {x["type"] for x in _ex.get("statements", [])}): continue      # re-read reports with no statements or missing IS/BS
             elif path.exists() and not (os.environ.get("REOCR") == "1" and idx.get(s, {}).get(j["key"], {}).get("ocr")):
                 continue
             try:

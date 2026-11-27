@@ -99,6 +99,12 @@ for sym in syms:
                 elif fv: e = {"v": fv["v"], "status": "filing only (unverified)", "filing": fv["v"], "aa": None, "src": fv["src"]}
                 else: e = {"v": a["v"], "status": "AA only", "filing": None, "aa": a["v"], "src": a["src"]}
                 res.setdefault(d, {})[f] = e
+        if tab == "q":      # EPS: when the filing's profit agrees with AA but EPS differs, AA's EPS is on a different share base (bonus/split adjusted): keep the filing EPS
+            for d, row in res.items():
+                e, pt = row.get("eps"), row.get("pat")
+                if e and pt and str(e["status"]).startswith("CONFLICT") and str(pt["status"]).startswith(("verified", "minor")) and e.get("filing") is not None:
+                    row["eps"] = {"v": e["filing"], "status": "filing used (AA EPS on a different share base; profit agrees)", "filing": e["filing"], "aa": e["aa"], "src": next((c["filing_src"] for c in conflicts if c["sym"] == sym and c["date"] == str(d) and c["field"] == "eps"), e["src"])}
+                    conflicts[:] = [c for c in conflicts if not (c["sym"] == sym and c["date"] == str(d) and c["field"] == "eps")]
         return res
     q = reconcile(q, fq, "q"); bs = reconcile(bs, fb, "b")
     # TTM from merged quarters

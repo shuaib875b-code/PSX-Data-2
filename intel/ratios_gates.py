@@ -20,11 +20,11 @@ def ttm_from(q, dates, f):
 def shift(d, m):
     import calendar; mm = d.month - 1 + m; y, mo = d.year + mm // 12, mm % 12 + 1
     return dt.date(y, mo, calendar.monthrange(y, mo)[1])
-def grade(q, dates, bsd, latest):
+def grade(q, dates, bsd, latest, cls="operating"):
     """A official+reconciled+recent, B official minor gaps, C estimates/incomplete, D weak/stale/inconsistent"""
     st = []
     for d in dates:
-        for f in ("revenue", "pbt", "pat", "net_markup_income", "net_premium", "income"):
+        for f in (("revenue", "pbt", "pat") if cls == "operating" else ("pbt", "pat")):      # banks/insurers: AA has no like-for-like revenue line, so grade on profit lines AA also carries
             if f in (q.get(d) or {}): st.append(q[d][f]["status"])
     for f in ("total_assets", "total_equity"):
         if bsd and f in bsd: st.append(bsd[f]["status"])
@@ -113,7 +113,7 @@ for sym, x in M.items():
         r.update({"ret_3m": ret(63), "ret_6m": ret(126), "ret_12m": ret(252), "ma50": float(c.tail(50).mean()), "ma200": float(c.tail(200).mean()) if len(c) >= 200 else None,
                   "vol_90d": float(c.pct_change().tail(90).std() * math.sqrt(252)), "vol_1y": float(c.pct_change().tail(252).std() * math.sqrt(252)) if len(c) > 252 else None,
                   "max_drawdown_1y": float((c.tail(252) / c.tail(252).cummax() - 1).min()), "avg_value_3m_pkr_m": float((p.close * p.volume).tail(63).mean() / 1e6), "price_days": int(len(p))})
-    g_, why = grade(q, last4 or ds[-4:], bsd, latest); r["confidence_grade"] = g_; r["confidence_note"] = why
+    g_, why = grade(q, last4 or ds[-4:], bsd, latest, r.get("class", "operating")); r["confidence_grade"] = g_; r["confidence_note"] = why
     R[sym] = r
     # ---------- gates ----------
     fin = cls in FIN_CLS; gate = {}

@@ -80,7 +80,7 @@ def basis_of(head):
 
 def classify(page):
     lines = [l for l in page.split("\n") if l.strip() and not MARK.match(l.strip())]
-    head = " ".join(lines[:15])
+    head = re.sub(r"\s+", " ", " ".join(lines[:15]))
     for k in ("BS", "CF", "IS"):
         if HEAD[k].search(head):
             if k == "IS" and re.search(r"other comprehensive income", head, re.I) and not re.search(r"profit or loss|profit and loss", head, re.I):

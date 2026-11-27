@@ -32,7 +32,7 @@ jobs:
           import json, glob, os
           want = "${{ github.event.inputs.symbols }}"
           if want != "ALL": print(want); raise SystemExit
-          L = sorted(os.path.basename(f)[:-5] for f in glob.glob("state/intel_extract/*.json") if any(not v.get("statements") for v in json.load(open(f)).values()))
+          L = sorted(os.path.basename(f)[:-5] for f in glob.glob("state/intel_extract/*.json") if any(not ({"IS", "BS"} <= {x["type"] for x in v.get("statements", [])}) for v in json.load(open(f)).values()))
           print(",".join(L[${{ matrix.shard }}::16]))
           PY
           )
