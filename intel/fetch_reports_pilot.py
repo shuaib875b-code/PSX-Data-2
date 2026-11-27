@@ -159,7 +159,12 @@ def main(argv):
                 r = dl(j["url"])
                 if r.status_code != 200 or r.content[:4] != b"%PDF":
                     print(s, j["key"], "not a PDF", r.status_code); idx.setdefault(s, {})[j["key"]] = {**j, "status": f"http_{r.status_code}", "retrieved": now()}; continue
-                txt, pages, ocr, spreads = to_text(r.content)
+                import signal
+                def _to(*a): raise TimeoutError("report took too long")
+                signal.signal(signal.SIGALRM, _to); signal.alarm(int(os.environ.get("REPORT_TIMEOUT", "1200")))
+                try: txt, pages, ocr, spreads = to_text(r.content)
+                except TimeoutError: print("TIMEOUT", s, j["key"], flush=True); signal.alarm(0); continue
+                finally: signal.alarm(0)
                 (OUT / s).mkdir(exist_ok=True)
                 with gzip.open(path, "wb", 9) as g:
                     g.write(txt.encode())
