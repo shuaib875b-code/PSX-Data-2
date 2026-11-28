@@ -8,12 +8,11 @@ jobs:
       - uses: actions/checkout@v4
       - name: probe
         run: |
-          D=state/intel_debug/kse2; mkdir -p $D
+          D=state/intel_debug/kse3; mkdir -p $D
           H='User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0'
-          for u in downloads daily-downloads dataportal/daily-downloads timeseries/eod/ENGRO timeseries/eod/KSE100 market-summary; do
-            n=$(echo $u | tr '/' '_')
-            curl -s -m 40 -H "$H" -o $D/$n -w "$u %{http_code} %{size_download}\n" "https://dps.psx.com.pk/$u" | tee -a $D/log.txt
-            grep -o 'href="[^"]*"' $D/$n 2>/dev/null | grep -i "download\|index\|indices\|\.zip\|\.csv\|\.xls\|\.Z\|history" | sort -u | head -40 >> $D/links_$n.txt || true
+          curl -s -m 40 -H "$H" -o $D/hist_page -w "hist page %{http_code} %{size_download}\n" https://dps.psx.com.pk/historical | tee -a $D/log.txt
+          for s in KSE100 ENGRO; do
+            curl -s -m 40 -H "$H" -X POST -d "month=11&year=2026&symbol=$s" -o $D/post_$s -w "POST $s %{http_code} %{size_download}\n" https://dps.psx.com.pk/historical | tee -a $D/log.txt
           done
           git config user.name bot; git config user.email bot@x; git add $D
-          git commit -qm "kse probe 2" && git pull -q --rebase && git push -q
+          git commit -qm "kse probe 3" && git pull -q --rebase && git push -q
