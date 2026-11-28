@@ -1,0 +1,20 @@
+name: intel-kse-probe
+on: {workflow_dispatch: {}}
+permissions: {contents: write}
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: probe
+        run: |
+          mkdir -p state/intel_debug/kse
+          H='User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0'
+          for u in timeseries/eod/KSE100 timeseries/int/KSE100 timeseries/eod/KSE-100 indices/KSE100 download/mkt_summary/2026-11-20.Z; do
+            n=$(echo $u | tr '/' '_')
+            curl -s -m 40 -H "$H" -o state/intel_debug/kse/$n -w "$u %{http_code} %{size_download}\n" "https://dps.psx.com.pk/$u" | tee -a state/intel_debug/kse/log.txt
+          done
+          unzip -p state/intel_debug/kse/download_mkt_summary_2026-11-20.Z 2>/dev/null | grep -i -m5 "kse\|index" >> state/intel_debug/kse/log.txt || true
+          head -c 400 state/intel_debug/kse/timeseries_eod_KSE100 >> state/intel_debug/kse/log.txt
+          git config user.name bot; git config user.email bot@x; git add state/intel_debug/kse
+          git commit -qm "kse probe" && git pull -q --rebase && git push -q
