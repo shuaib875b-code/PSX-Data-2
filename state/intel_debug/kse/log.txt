@@ -1,9 +1,0 @@
-timeseries/eod/KSE100 404 47758
-timeseries/int/KSE100 404 47758
-timeseries/eod/KSE-100 404 47759
-indices/KSE100 200 73948
-download/mkt_summary/2026-11-20.Z 200 23795
-20NOV2026|KSE30-DEC|41|KSE30|0.0|0|0|52388|0|52192|||
-20NOV2026|KSE30-JAN|41|KSE30|0.0|0|0|53023|0|52825|||
-20NOV2026|KSE30-NOV|41|KSE30|0.0|0|0|51911|0|51717|||
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="google-site-verification" content="ucGuScv6fdM8uhZru-aeXK4qsaPfO3HiuZFKB90UpPU"><meta name="description" content="PSX (Pakistan Stock Exchange Limited) - Stock/share market updates from Pakistan’s premier stock exchange. Get all the current stock/sh
