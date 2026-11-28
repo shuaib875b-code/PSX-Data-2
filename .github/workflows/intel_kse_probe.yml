@@ -8,11 +8,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: probe
         run: |
-          D=state/intel_debug/kse3; mkdir -p $D
+          D=state/intel_debug/kse4; mkdir -p $D
           H='User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0'
-          curl -s -m 40 -H "$H" -o $D/hist_page -w "hist page %{http_code} %{size_download}\n" https://dps.psx.com.pk/historical | tee -a $D/log.txt
-          for s in KSE100 ENGRO; do
-            curl -s -m 40 -H "$H" -X POST -d "month=11&year=2026&symbol=$s" -o $D/post_$s -w "POST $s %{http_code} %{size_download}\n" https://dps.psx.com.pk/historical | tee -a $D/log.txt
-          done
+          curl -s -m 60 -H "$H" -o $D/script.js -w "script %{http_code} %{size_download}\n" "https://dps.psx.com.pk/static/script.js?v=1.81" | tee -a $D/log.txt
+          grep -o '.\{120\}\(historical\|timeseries\|/eod\|X-Requested\|_k\b\).\{160\}' $D/script.js | head -30 > $D/hits.txt || true
           git config user.name bot; git config user.email bot@x; git add $D
-          git commit -qm "kse probe 3" && git pull -q --rebase && git push -q
+          git commit -qm "kse probe 4" && git pull -q --rebase && git push -q
